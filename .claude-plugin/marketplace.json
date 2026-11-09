@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "flow",
+  "description": "Combined engineering workflow skills.",
+  "owner": {
+    "name": "epriding"
+  },
+  "plugins": [
+    {
+      "name": "flow",
+      "version": "0.1.0",
+      "source": "./",
+      "description": "Agent Skills with Wizard and selected pstack skills.",
+      "homepage": "https://github.com/epriding/flow",
+      "license": "MIT",
+      "keywords": [
+        "skills",
+        "agents",
+        "engineering",
+        "spec",
+        "tdd",
+        "review",
+        "ship"
+      ]
+    }
+  ]
+}

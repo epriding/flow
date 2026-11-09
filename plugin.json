@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "flow",
+  "version": "0.1.0",
+  "description": "Agent Skills engineering workflows with Wizard, Unslop, decision trails, and code explanations.",
+  "author": {
+    "name": "epriding"
+  },
+  "homepage": "https://github.com/epriding/flow",
+  "repository": "https://github.com/epriding/flow",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "engineering",
+    "spec",
+    "tdd",
+    "review",
+    "ship"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "skill_name": "wizard",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Generate an interactive bash wizard for provisioning infrastructure and setting up CI secrets",
+        "top_k": 3
+      },
+      {
+        "prompt": "Walk me through manual credential setup in an unfamiliar third-party dashboard",
+        "top_k": 3
+      },
+      {
+        "prompt": "Create a wizard for the human steps in this one-off migration cutover",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Fix the failing CI pipeline",
+        "owner": "ci-cd-and-automation"
+      },
+      {
+        "prompt": "Audit the upload endpoint for vulnerabilities",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Generate a repeatable Bash wizard for a human to create an API key in a dashboard, store it in .env, and set the matching CI secret.",
+      "expected_output": "Uses the bundled template without editing its helper library; Scopes manual steps and value destinations before writing stages; Uses hidden secret input and verifies Bash syntax without running the interactive script",
+      "expectations": [
+        "Uses the bundled template without editing its helper library",
+        "Scopes manual steps and value destinations before writing stages",
+        "Uses hidden secret input and verifies Bash syntax without running the interactive script"
+      ]
+    }
+  ]
+}

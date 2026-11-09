@@ -1,0 +1,42 @@
+{
+  "skill_name": "teach",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Teach me this subsystem so I really understand it",
+        "top_k": 3
+      },
+      {
+        "prompt": "Help me really understand this change and how and why it works",
+        "top_k": 3
+      },
+      {
+        "prompt": "Explain this body of work plainly at my pace",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Fix the failing CI pipeline",
+        "owner": "ci-cd-and-automation"
+      },
+      {
+        "prompt": "Audit the upload endpoint for vulnerabilities",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Teach me the request cache in this repository. I am about to change it and want to understand its behavior and rationale.",
+      "expected_output": "Invokes how and why with scope matching the question; Preserves confidence language from rationale findings; Starts with the smallest complete plain explanation and avoids an unsolicited lecture",
+      "expectations": [
+        "Invokes how and why with scope matching the question",
+        "Preserves confidence language from rationale findings",
+        "Starts with the smallest complete plain explanation and avoids an unsolicited lecture"
+      ]
+    }
+  ]
+}

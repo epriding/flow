@@ -1,0 +1,42 @@
+{
+  "skill_name": "why",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Why did we pick this design and what tradeoffs motivated it",
+        "top_k": 3
+      },
+      {
+        "prompt": "Investigate the design rationale and history behind this data-backed threshold",
+        "top_k": 3
+      },
+      {
+        "prompt": "Why does this work this way according to source control and issue history",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Fix the failing CI pipeline",
+        "owner": "ci-cd-and-automation"
+      },
+      {
+        "prompt": "Audit the upload endpoint for vulnerabilities",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Investigate why this service retries failed requests three times. Only local git history is available.",
+      "expected_output": "Anchors the investigation in code and history; Records unavailable evidence categories as gaps; Separates cited findings from inference and unknown motivation",
+      "expectations": [
+        "Anchors the investigation in code and history",
+        "Records unavailable evidence categories as gaps",
+        "Separates cited findings from inference and unknown motivation"
+      ]
+    }
+  ]
+}

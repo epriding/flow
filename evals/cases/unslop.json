@@ -1,0 +1,42 @@
+{
+  "skill_name": "unslop",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Remove the AI writing patterns from this text while preserving meaning and tone",
+        "top_k": 3
+      },
+      {
+        "prompt": "Unslop this prose and cut the AI tells",
+        "top_k": 3
+      },
+      {
+        "prompt": "Edit this paragraph to replace AI filler with plain language",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Fix the failing CI pipeline",
+        "owner": "ci-cd-and-automation"
+      },
+      {
+        "prompt": "Audit the upload endpoint for vulnerabilities",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Rewrite this sentence without AI tells: \"It is important to note that this vibrant platform serves as a testament to the intricate interplay of tools.\" Do not invent facts.",
+      "expected_output": "Removes filler and AI vocabulary; Preserves supported meaning without inventing claims; Uses plain prose without a generic concluding sentence",
+      "expectations": [
+        "Removes filler and AI vocabulary",
+        "Preserves supported meaning without inventing claims",
+        "Uses plain prose without a generic concluding sentence"
+      ]
+    }
+  ]
+}

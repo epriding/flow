@@ -1,0 +1,42 @@
+{
+  "skill_name": "show-me-your-work",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Keep a reviewable TSV decision trail for this unattended run",
+        "top_k": 3
+      },
+      {
+        "prompt": "Show me your work with a decision log of what why evidence and result",
+        "top_k": 3
+      },
+      {
+        "prompt": "Log decisions during this long-running multi-phase task for later review",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Fix the failing CI pipeline",
+        "owner": "ci-cd-and-automation"
+      },
+      {
+        "prompt": "Audit the upload endpoint for vulnerabilities",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Keep a decision trail for an unattended refactor. Record the choice to preserve the public API and the later failed test checkpoint. No independent reviewer is available.",
+      "expected_output": "Uses the bundled TSV header and helper; Records concrete evidence and outcomes without inventing passing tests; Keeps the log local and discloses the unavailable independent review",
+      "expectations": [
+        "Uses the bundled TSV header and helper",
+        "Records concrete evidence and outcomes without inventing passing tests",
+        "Keeps the log local and discloses the unavailable independent review"
+      ]
+    }
+  ]
+}

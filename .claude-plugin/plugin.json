@@ -1,0 +1,19 @@
+{
+  "name": "flow",
+  "version": "0.1.0",
+  "description": "Agent Skills engineering workflows with Wizard, Unslop, decision trails, and code explanations.",
+  "author": {
+    "name": "epriding"
+  },
+  "homepage": "https://github.com/epriding/flow",
+  "repository": "https://github.com/epriding/flow",
+  "license": "MIT",
+  "commands": [
+    "./.claude/commands",
+    "./commands"
+  ],
+  "skills": "./skills",
+  "experimental": {
+    "evals": "evals/plugin"
+  }
+}
