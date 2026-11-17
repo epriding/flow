@@ -6,6 +6,8 @@ Flow combines all 25 engineering workflows from Addy Osmani's **agent-skills** w
 
 ## Added skills
 
+Flow also includes [humani-md](skills/humani-md/SKILL.md), an original skill that creates short, plain-language companions before technical specs and plans. Each companion gets an Unslop pass and human approval before technical expansion. Small fixes need no extra documents.
+
 | Skill | Source | Purpose |
 | --- | --- | --- |
 | [wizard](skills/wizard/SKILL.md) | Matt Pocock | Generate an interactive Bash wizard for manual human steps. Includes the original template. |
