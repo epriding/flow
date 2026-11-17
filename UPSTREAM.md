@@ -13,3 +13,5 @@ Agent Skills supplies all 25 original skills, personas, commands, hooks, referen
 Matt Pocock supplies `wizard`, including its template and UI metadata. pstack-claude supplies `unslop`, `show-me-your-work`, `how`, `why`, and `teach`, including their references and helpers.
 
 Flow adapts pstack runtime and model routing to the current host through `references/skill-runtime.md`, relocates the transcript-directory helper alongside the decision-log helper, and adds discovery routing and validation sections for the imported skills. No pstack session hooks or unrelated skills are enabled.
+
+`humani-md` is original to Flow. It adds readable review before technical specs and plans, uses `unslop` for prose, and follows MD-Slayer retention rules when that skill is available.

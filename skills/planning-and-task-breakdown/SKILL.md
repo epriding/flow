@@ -32,6 +32,8 @@ Before writing any code, operate in read-only mode:
 
 **Do NOT write code during planning.** The output is a plan document saved to `tasks/plan.md` and a task list recorded in the task list target (see Output Files; default `tasks/todo.md`), not implementation.
 
+After inspection, use [humani-md](../humani-md/SKILL.md) to present the readable plan and wait for approval before writing the technical plan or task list. Reuse an existing approval for the same readable version. Technical plan review still applies.
+
 ### Step 2: Identify the Dependency Graph
 
 Map what depends on what:

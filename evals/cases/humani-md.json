@@ -1,0 +1,72 @@
+{
+  "skill_name": "humani-md",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Create a short plain-language companion for human review before writing the technical specification",
+        "top_k": 3
+      },
+      {
+        "prompt": "Before the implementation plan, give me a readable two-minute plan with what done looks like",
+        "top_k": 3
+      },
+      {
+        "prompt": "Update the humani-md companion because the approved scope changed and needs renewed approval",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Remove AI writing patterns from this announcement without changing its meaning",
+        "owner": "unslop"
+      },
+      {
+        "prompt": "Interview me about the problem before proposing a solution",
+        "owner": "interview-me"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "execution",
+      "prompt": "Read README.md. Use humani-md to start the specification workflow for this reading list project. File creation for both pairs is already authorized. I have not approved any document content yet.",
+      "files": ["humani-md"],
+      "expected_output": "A short readable spec saved beside the intended technical spec, edited with unslop, and presented for approval before technical expansion",
+      "expectations": [
+        "Creates SPEC.human.md and does not create SPEC.md, either plan file, a task list, or implementation code before approval",
+        "Explains the problem, intended users, changes, exclusions, material risks or tradeoffs, and unresolved decisions in plain language",
+        "Distinguishes delivered behavior from the evidence or checks that would verify it, without claiming those checks already passed",
+        "Reads and applies unslop, preserves the private-list and duplicate-link requirements, and keeps the companion at approximately 500 words or fewer",
+        "Presents the readable companion and waits for content approval without asking again for file-creation permission"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "execution",
+      "prompt": "Read README.md. The technical specification for the reading list has been approved in our prior review with the requirements recorded in README.md. Use humani-md for the planning stage. The readable plan has not been written or approved. Creation of both file pairs is already authorized. Do not recreate the spec stage.",
+      "files": ["humani-md"],
+      "expected_output": "A readable implementation plan with meaningful order and checkpoints, presented for approval before the technical plan or tasks are written",
+      "expectations": [
+        "Creates tasks/plan.human.md without creating tasks/plan.md, tasks/todo.md, or implementation code",
+        "Explains the main steps and their dependency order, plus verification checkpoints rather than a detailed technical task inventory",
+        "Includes scope, material risks, what done looks like, and how the outcome will be verified",
+        "Reads and applies unslop and asks for readable-plan approval before technical expansion",
+        "Uses the established specification approval without creating a new readable specification or asking to reapprove unchanged requirements"
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "execution",
+      "prompt": "Read README.md. Use humani-md to handle this change during technical planning: the approved readable spec promised a private reading list with no sharing. I am now asking you to propose public sharing links as well. Creation of companion files is authorized, but the revised scope has not yet been reviewed. Show me the revised readable spec for approval before continuing the affected technical work.",
+      "files": ["humani-md"],
+      "expected_output": "A revised readable spec that explains the scope change and its privacy risks, then waits for renewed approval",
+      "expectations": [
+        "Creates or updates SPEC.human.md to explicitly identify public sharing as a proposed change to the previously approved private-only scope",
+        "Explains the material privacy or access tradeoff and flags unresolved sharing behavior without treating assumptions as approved",
+        "Updates what done looks like and how sharing behavior would be verified",
+        "Reads and applies unslop, then waits for renewed readable approval without implementing sharing or writing an already-approved technical expansion"
+      ]
+    }
+  ]
+}

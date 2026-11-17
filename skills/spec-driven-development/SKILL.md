@@ -66,6 +66,8 @@ Build order: identity → billing, notifications → reporting
 
 ### Phase 1: Specify
 
+Before writing the technical spec, use [humani-md](../humani-md/SKILL.md) to present its plain-language companion and wait for approval. Then continue this phase. Readable approval does not replace the technical spec review below.
+
 Start with a high-level vision. Ask the human clarifying questions until requirements are concrete.
 
 **Surface assumptions immediately.** Before writing any spec content, list what you're assuming:
@@ -175,7 +177,7 @@ This lets you loop, retry, and problem-solve toward a clear goal rather than gue
 
 ### Phase 2: Plan
 
-With the validated spec, generate a technical implementation plan:
+With the validated spec, use [humani-md](../humani-md/SKILL.md) to present a readable plan and wait for approval before generating the technical implementation plan:
 
 1. Identify the major components and their dependencies
 2. Determine the implementation order (what must be built first)

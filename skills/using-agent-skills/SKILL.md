@@ -18,6 +18,7 @@ Task arrives
     │
     ├── Don't know what you want yet? ──────→ interview-me
     ├── Have a rough concept, need variants? → idea-refine
+    ├── Before a substantial spec or plan? → humani-md
     ├── New project/feature/change? ──→ spec-driven-development
     ├── No quality bar written down? ──→ constraint-driven-development
     ├── Have a spec, need tasks? ──────→ planning-and-task-breakdown
@@ -175,6 +176,7 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 |-------|-------|-----------------|
 | Define | interview-me | Surface what the user actually wants before any plan, spec, or code exists |
 | Define | idea-refine | Refine ideas through structured divergent and convergent thinking |
+| Define / Plan | humani-md | Review a short readable companion before technical expansion |
 | Define | spec-driven-development | Requirements and acceptance criteria before code |
 | Plan | planning-and-task-breakdown | Decompose into small, verifiable tasks |
 | Build | incremental-implementation | Thin vertical slices, test each before expanding |
@@ -199,4 +201,4 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 
 ## Flow additions
 
-Agent Skills remains the primary engineering lifecycle. The added skills complement that lifecycle: use `wizard` only for human steps, `show-me-your-work` for reviewable decision trails, and `unslop` for prose. Use `how` for behavior, `why` for motivation, and `teach` to combine them. These explanation skills do not authorize implementation changes. See [runtime guidance](../../references/skill-runtime.md) for host tools and model selection.
+Agent Skills remains the primary engineering lifecycle. The added skills complement that lifecycle: apply `humani-md` before technical specs and plans for substantial work, use `wizard` only for human steps, `show-me-your-work` for reviewable decision trails, and `unslop` for prose. Use `how` for behavior, `why` for motivation, and `teach` to combine them. These explanation skills do not authorize implementation changes. See [runtime guidance](../../references/skill-runtime.md) for host tools and model selection.
