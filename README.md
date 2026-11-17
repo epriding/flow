@@ -16,8 +16,11 @@ Flow also includes [humani-md](skills/humani-md/SKILL.md), an original skill tha
 | [how](skills/how/SKILL.md) | pstack-claude | Explain code behavior, architecture, and ownership. |
 | [why](skills/why/SKILL.md) | pstack-claude | Investigate design rationale with citations and explicit confidence. |
 | [teach](skills/teach/SKILL.md) | pstack-claude | Combine how and why into a plain explanation at the reader's pace. |
+| [md-slayer](skills/md-slayer/SKILL.md) | Flow | Prevent Markdown bloat, retire completed task docs, and review older files before deletion. |
 
 The [skill router](skills/using-agent-skills/SKILL.md) includes these additions. All skills are packaged together under the `flow` plugin name. Supporting references, scripts, personas, and commands are bundled locally; the original plugins do not need to be installed separately.
+
+MD-Slayer applies alongside the engineering workflows. It allows justified permanent docs, asks before creating temporary specs or plans, and removes current-task temporary docs after verified completion and before the final commit, PR handoff, or final response. Older deletion candidates are listed with assessments and reasons for the user to select.
 
 ## Install
 
