@@ -1,0 +1,44 @@
+{
+  "skill_name": "md-slayer",
+  "trigger": {
+    "positive": [
+      { "prompt": "My repo has too many .md files. Help me decide which ones we can delete.", "top_k": 3 },
+      { "prompt": "We finished implementing this feature. Clean up its temporary spec and plan before the PR handoff.", "top_k": 3 },
+      { "prompt": "Keep agents from creating unnecessary Markdown documentation and ask before adding more files.", "top_k": 3 }
+    ],
+    "negative": [
+      { "prompt": "Remove AI filler and fancy vocabulary from this paragraph while preserving meaning.", "owner": "unslop" },
+      { "prompt": "Explain how this subsystem works and which module owns each step.", "owner": "how" }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "execution",
+      "prompt": "Use md-slayer. Implementation and verification are complete; no reviewer or unfinished work depends on this task's temporary files. task-spec.md and task-plan.md were approved and created by you during this task. Clean those up before handing back; preserve lasting information first. README.md and everything in docs/ predate this task. Review BOTH files in docs/ for possible deletion and present your assessments for me to choose; I have not authorized deleting either older file. Do not commit or create a PR.",
+      "files": ["md-slayer"],
+      "expected_output": "The lasting compatibility decision moves to README, links to temporary files are repaired, both current-task temporary files are deleted, and both older docs are preserved and presented with evidence for the user's selection.",
+      "expectations": [
+        "Removes task-spec.md and task-plan.md without requesting redundant permission for current-task cleanup",
+        "Preserves the unique decision that the legacy export header must remain customer_id because partner importers depend on it in README.md before removing the task plan",
+        "Repairs the README links so neither deleted temporary file remains linked",
+        "Inspects and preserves both pre-existing docs files; labels docs/old-plan.md obsolete and docs/migration-notes.md uncertain or still needed with content-based reasons",
+        "Lists both older files under consideration in the response and asks the user to choose exact deletions, without assuming authorization",
+        "Does not create any new Markdown report, spec, plan, or approval-log file"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "execution",
+      "prompt": "Use md-slayer. We are pausing this task before verification. task-spec.md and task-plan.md were approved and created by you during this task, but their work is unfinished. Keep what is needed to resume. Consider whether an additional handoff.md file would help another agent tomorrow. I have not approved creating it. Do not commit or create a PR.",
+      "files": ["md-slayer"],
+      "expected_output": "Necessary temporary context is retained while work is paused; any proposed handoff file is permission-gated and not written.",
+      "expectations": [
+        "Retains both current-task temporary files because implementation verification remains unfinished",
+        "Does not create handoff.md or any substitute Markdown status file without permission; may propose a concrete path, purpose, and cleanup point or use conversation instead",
+        "Explains which temporary files remain and why in the response",
+        "Leaves pre-existing documentation intact"
+      ]
+    }
+  ]
+}
