@@ -38,6 +38,7 @@ Task arrives
     ├── Manual human setup steps? ─────→ wizard
     ├── Remove AI writing patterns? ───→ unslop
     ├── Prevent Markdown clutter? ─────→ md-slayer
+    ├── Structure a workspace for agents? → icm-architect
     ├── Need a decision trail? ────────→ show-me-your-work
     ├── How does this code work? ──────→ how
     ├── Why was it built this way? ────→ why
@@ -177,6 +178,7 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 |-------|-------|-----------------|
 | Define | interview-me | Surface what the user actually wants before any plan, spec, or code exists |
 | Cross-cutting | md-slayer | Keep necessary Markdown and retire temporary docs with appropriate approval |
+| Cross-cutting | icm-architect | Design or restructure a folder into an ICM workspace where structure is the agent architecture |
 | Define | idea-refine | Refine ideas through structured divergent and convergent thinking |
 | Define / Plan | humani-md | Review a short readable companion before technical expansion |
 | Define | spec-driven-development | Requirements and acceptance criteria before code |
@@ -203,6 +205,6 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 
 ## Flow additions
 
-Agent Skills remains the primary engineering lifecycle. The added skills complement that lifecycle: apply `humani-md` before technical specs and plans for substantial work, use `wizard` only for human steps, `show-me-your-work` for reviewable decision trails, and `unslop` for prose. Use `how` for behavior, `why` for motivation, and `teach` to combine them. These explanation skills do not authorize implementation changes. See [runtime guidance](../../references/skill-runtime.md) for host tools and model selection.
+Agent Skills remains the primary engineering lifecycle. The added skills complement that lifecycle: apply `humani-md` before technical specs and plans for substantial work, use `wizard` only for human steps, `show-me-your-work` for reviewable decision trails, `icm-architect` to design or restructure folder-based agent workspaces, and `unslop` for prose. Use `how` for behavior, `why` for motivation, and `teach` to combine them. These explanation skills do not authorize implementation changes. See [runtime guidance](../../references/skill-runtime.md) for host tools and model selection.
 
 Apply `md-slayer` alongside these workflows before creating Markdown, when finishing implementation, and when reviewing documentation clutter. Perform specification and planning work in conversation or planning tools unless temporary file creation is approved. A workflow's default file output is not approval to create it. Follow MD-Slayer's completion and preservation checks before removing current-task temporary files; list older candidates with assessments and wait for the user's deletion selections.

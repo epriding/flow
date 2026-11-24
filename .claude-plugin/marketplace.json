@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "flow",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./",
       "description": "Agent Skills with Wizard and selected pstack skills.",
       "homepage": "https://github.com/epriding/flow",

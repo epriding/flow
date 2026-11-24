@@ -1,6 +1,6 @@
 {
   "name": "flow",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Agent Skills engineering workflows with Wizard, Unslop, decision trails, and code explanations.",
   "author": {
     "name": "epriding"
@@ -12,7 +12,7 @@
   "interface": {
     "displayName": "Flow",
     "shortDescription": "Engineering workflows, setup wizards, and clear explanations.",
-    "longDescription": "Flow combines all 25 Addy Osmani Agent Skills workflows with Wizard from Matt Pocock and five skills from pstack-claude.",
+    "longDescription": "Flow combines all 25 Addy Osmani Agent Skills workflows with Wizard from Matt Pocock, five skills from pstack-claude, and ICM Architect.",
     "developerName": "epriding",
     "category": "Productivity",
     "capabilities": [
