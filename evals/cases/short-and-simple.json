@@ -1,0 +1,43 @@
+{
+  "skill_name": "short-and-simple",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "/short-and-simple what is a webhook",
+        "top_k": 3
+      },
+      {
+        "prompt": "That was too much. Explain it short and simple in plain English",
+        "top_k": 3
+      },
+      {
+        "prompt": "I don't get it, can you dumb it down and keep it short",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Teach me this subsystem so I really understand its behavior and rationale",
+        "owner": "teach"
+      },
+      {
+        "prompt": "Fix the failing CI pipeline",
+        "owner": "ci-cd-and-automation"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "/short-and-simple what is a database index",
+      "expected_output": "Opens with a one-line plain summary; Gives three to five short jargon-free bullets; Includes one tiny concrete example; Ends with a one-line offer to go deeper",
+      "expectations": [
+        "Opens with a one-line plain summary",
+        "Gives three to five short jargon-free bullets",
+        "Includes one tiny concrete example",
+        "Ends with a one-line offer to go deeper"
+      ]
+    }
+  ]
+}

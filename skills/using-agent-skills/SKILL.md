@@ -43,6 +43,7 @@ Task arrives
     ├── How does this code work? ──────→ how
     ├── Why was it built this way? ────→ why
     ├── Teach me this subsystem? ──────→ teach
+    ├── Explain it short and simple? ──→ short-and-simple
     ├── Committing/branching? ─────────→ git-workflow-and-versioning
     ├── CI/CD pipeline work? ──────────→ ci-cd-and-automation
     ├── Deprecating/migrating? ────────→ deprecation-and-migration
@@ -205,6 +206,6 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 
 ## Flow additions
 
-Agent Skills remains the primary engineering lifecycle. The added skills complement that lifecycle: apply `humani-md` before technical specs and plans for substantial work, use `wizard` only for human steps, `show-me-your-work` for reviewable decision trails, `icm-architect` to design or restructure folder-based agent workspaces, and `unslop` for prose. Use `how` for behavior, `why` for motivation, and `teach` to combine them. These explanation skills do not authorize implementation changes. See [runtime guidance](../../references/skill-runtime.md) for host tools and model selection.
+Agent Skills remains the primary engineering lifecycle. The added skills complement that lifecycle: apply `humani-md` before technical specs and plans for substantial work, use `wizard` only for human steps, `show-me-your-work` for reviewable decision trails, `icm-architect` to design or restructure folder-based agent workspaces, and `unslop` for prose. Use `how` for behavior, `why` for motivation, and `teach` to combine them. Use `short-and-simple` for a brief, plain explanation of a topic or the last answer. These explanation skills do not authorize implementation changes. See [runtime guidance](../../references/skill-runtime.md) for host tools and model selection.
 
 Apply `md-slayer` alongside these workflows before creating Markdown, when finishing implementation, and when reviewing documentation clutter. Perform specification and planning work in conversation or planning tools unless temporary file creation is approved. A workflow's default file output is not approval to create it. Follow MD-Slayer's completion and preservation checks before removing current-task temporary files; list older candidates with assessments and wait for the user's deletion selections.
