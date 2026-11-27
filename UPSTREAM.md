@@ -17,4 +17,6 @@ Flow adapts pstack runtime and model routing to the current host through `refere
 
 `humani-md` is original to Flow. It adds readable review before technical specs and plans, uses `unslop` for prose, and follows MD-Slayer retention rules when that skill is available.
 
+`short-and-simple` is original to Flow. It gives brief, plain explanations of a topic or the previous answer.
+
 icm-architect (Jake Van Clief, MIT) supplies `icm-architect` with its references, templates, and standard-library Python scripts. Flow adds a "Use when" trigger and the Overview, When to Use, Common Rationalizations, Red Flags, and Verification sections, renames `CONTEXT.md` and `stage-CONTEXT.md` templates to `root-context.md` and `stage-context.md` for the naming lint, and converts one backticked reference path to a link.

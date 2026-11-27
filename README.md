@@ -17,6 +17,7 @@ Flow also includes [humani-md](skills/humani-md/SKILL.md), an original skill tha
 | [why](skills/why/SKILL.md) | pstack-claude | Investigate design rationale with citations and explicit confidence. |
 | [teach](skills/teach/SKILL.md) | pstack-claude | Combine how and why into a plain explanation at the reader's pace. |
 | [md-slayer](skills/md-slayer/SKILL.md) | Flow | Prevent Markdown bloat, retire completed task docs, and review older files before deletion. |
+| [short-and-simple](skills/short-and-simple/SKILL.md) | Flow | Explain a topic, or the last answer, in a short summary, plain bullets and a tiny example. |
 | [icm-architect](skills/icm-architect/SKILL.md) | RinDig/icm-architect | Design a process or restructure a folder, repo, or vault into an ICM workspace where folder structure is the agent architecture. |
 
 The [skill router](skills/using-agent-skills/SKILL.md) includes these additions. All skills are packaged together under the `flow` plugin name. Supporting references, scripts, personas, and commands are bundled locally; the original plugins do not need to be installed separately.
